@@ -1,21 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import TrendingMoviesScreen from './src/screens/TrendingMoviesScreen/index';
+import HomeDrawerNavigator from './src/Drawer/HomeDrawerNavigator';
+import SingleMovie from './src/screens/SingleMovieScreen/SingleMovieScreen'
+import SearchScreen from './src/screens/SearchScreen/SearchScreen'
+import CastScreen from './src/screens/CastScreen/CastScreen';
 
-export default function App() {
+const Stack = createStackNavigator()
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home"
+      screenOptions={{
+        headerTitle: false,
+        headerTransparent: true,
+        headerBackTitleVisible: false,
+        headerShown: false,
+      }}
+      >
+        <Stack.Screen name="Home" component={HomeDrawerNavigator} />
+        <Stack.Screen name="Trending" component={TrendingMoviesScreen} />
+        <Stack.Screen name="Single" component={SingleMovie} />
+        <Stack.Screen name="Search" component={SearchScreen} />
+        <Stack.Screen name="Cast" component={CastScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
