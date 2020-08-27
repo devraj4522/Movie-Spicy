@@ -5,6 +5,10 @@ Get latest release of the movie and know about its rating , watch teaser and cas
 After the ejection from expo many changes have occured. So android, and ios may not work correctly.
 Use only expo to run the application.
 
+## Download 
+Download the application from expo 
+https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40devraj4522/MovieSpicy-d65e98023a5844808366e5bb42c489f3-signed.apk
+
 ## Installation
 
 1. Create a new app from expo init 
