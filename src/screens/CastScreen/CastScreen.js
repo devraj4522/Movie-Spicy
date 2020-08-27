@@ -16,8 +16,6 @@ const CastScreen = ({navigation, route})=>{
 
     useEffect(() => {
         requestSinglePerson(id, setData, setIsLoading);
-        // requestRecomendationCard(id, setRecomendationData);
-        // requestMovieAllImagesCard(id, setMovieImagesListData);
       }, [])
 
       if (!isLoading) {
@@ -25,10 +23,12 @@ const CastScreen = ({navigation, route})=>{
 
             <Container>
                 <ScrollView>
-                <CastHeader navigation={navigation} data={data}/>
-                <CastBody navigation={navigation} data={data}/>
-                <SingleRecomendation data={data.person.known_for} navigation={navigation} />
-                <View style={{height: 400}}></View>
+                <CastHeader navigation={navigation} data={data} />
+                <View style={{margin:16}}>
+                    <CastBody navigation={navigation} data={data}/>
+                    <SingleRecomendation data={data.person.known_for} navigation={navigation} style={{ margin: 16 }} />
+                    <View style={{height: 200}}></View>
+                </View>
                 </ScrollView>
             </Container>
         );

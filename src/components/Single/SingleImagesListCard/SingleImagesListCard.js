@@ -16,17 +16,17 @@ const Item = ({ poster_path }) => {
       transparent={true}
       visible={modalVisible}
       >
-        <TouchableWithoutFeedback onPress={()=>setModalVisible(false)} style={{backgroundColor:"blue"}}>
+        <TouchableWithoutFeedback onPress={()=>setModalVisible(false)}>
         <View style={{flex:1,
         backgroundColor: "rgba(0,0,0,0.5)",
         }}>
         <Image source={{ uri: `${getImageUrl("w500", poster_path)}` }} style={{
             // flex: 1,
-            width: "90%",
-            height: "70%",
+            height:240,
+            width:"100%",
             borderRadius: 12,
-            // margin: "30%",
-            // marginLeft: "10%",
+            marginTop: 100,
+            // marginHorizontal: 0,
             justifyContent:"center",
             alignItems:"center",      
             // marginTop: "10%",
@@ -64,7 +64,7 @@ const SingleImagesListCard = ({ navigation, data }) => {
 
   return (
     <View>
-      <Text style={{fontSize: 23}}>Images</Text>
+      <Text style={{fontSize: 23, marginBottom: 3}}>Images</Text>
       <FlatList
         data={data}
         renderItem={renderItem}

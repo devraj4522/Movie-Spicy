@@ -2,7 +2,7 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 export default StyleSheet.create({
     innerContainer: {
-        height: "40%",
+        height: 300,
     },
     headerImage: {
         width: "100%",

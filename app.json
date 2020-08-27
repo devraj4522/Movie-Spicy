@@ -17,10 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.devraj4522.MovieSpicy"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "android": {
+      "package": "com.devraj4522.MovieSpicy"
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
   }
 }

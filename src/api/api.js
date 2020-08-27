@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {getPopularUrl, getImageUrl, getSearchUrl, getMovieCastsListUrl, getRecomendationUrl, getSingleMovieImagesListUrl, getSingleMovieUrl, getSinglePersonUrl, getTrendingUrl} from './url';
+import {getPopularUrl, getImageUrl, getSearchUrl, getMovieCastsListUrl, getRecomendationUrl, getSingleMovieImagesListUrl, getSingleMovieUrl, getSinglePersonUrl, getTrendingUrl, getYoutubeVideoIdUrl} from './url';
 import { setUrlToHorizontalCard } from '../utils/Utils';
 
 
@@ -82,6 +82,19 @@ export const requestTrendingMovieList= async (page, setData) => {
   const data  = await request(getTrendingUrl(page));
   if (data) {
     setData(data.results);
+  }
+  else{
+    console.log("Not data")
+  } 
+};
+
+export const requestYouTubeVideoData= async (id, setData ) => {
+  const data  = await request(getYoutubeVideoIdUrl(id));
+
+  // Get Only first Video
+  const results = data.results[0]
+  if (results) {
+    setData(results);
   }
   else{
     console.log("Not data")

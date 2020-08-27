@@ -28,7 +28,7 @@ const SingleHeader = ({ navigation, id, data }) => {
                                     size={30}
                                     style={{ fontWeight: "800", margin: 12, marginTop: 30 }}
                                 />
-                                <View style={{ margin: 16, marginTop: 90 }}>
+                                <View style={{ margin: 16, marginTop: 120 }}>
                                     <Text style={{ fontSize: 35, fontWeight: "bold", color: "#ffffff" }}>{data.title}</Text>
                                     <View style={styles.titleBar}></View>
                                 </View>
