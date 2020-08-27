@@ -14,6 +14,7 @@ const Item = ({ poster_path,title, navigation, id }) => {
           height: 175,
           width: 120,
           borderRadius: 12,
+          backgroundColor:"#282828"
         }} />
       </View>
       <Text> {title}</Text>
@@ -33,8 +34,8 @@ const SingleRecomendation = ({ navigation, data }) => {
   }
   
   return (
-    <View>
-      <Text style={{fontSize: 23}}>Recommendations</Text>
+    <View style={{marginVertical: 15}}>
+      <Text style={{fontSize: 23, marginBottom: 3}}>Recommendations</Text>
       <FlatList
         data={data}
         renderItem={renderItem}

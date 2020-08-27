@@ -46,3 +46,6 @@ export const getSearchUrl = (keyWord) =>  `${ROOT_URL}/search/movie?${formatGene
 
 export const getTrendingUrl = (page) =>  `${ROOT_URL}/movie/now_playing?${formatGeneralQuerry( {...generalQuerry, ...{region: "IN", page: page} }) }` 
 
+// Get VideoUrl
+export const getYoutubeVideoIdUrl = (id) =>  `${ROOT_URL}/movie/${id}/videos?${formatGeneralQuerry( {...generalQuerry }) }` 
+

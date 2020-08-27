@@ -13,7 +13,7 @@ const CastHeader = ({ navigation, data }) => {
     return (
         <View style={{
             // flex:1,
-            height: "50%"
+            height: 300
         }}>
             <ImageBackground source={image} style={{
                 width: "100%",
@@ -31,7 +31,7 @@ const CastHeader = ({ navigation, data }) => {
                         size={30}
                         style={{ fontWeight: "800", margin: 12, marginTop: 30 }}
                     />
-                    <View style={{ margin: 16, marginTop: 90 }}>
+                    <View style={{ margin: 16, marginTop: 170 }}>
                         <Text style={{ fontSize: 35, fontWeight: "bold", color: "#ffffff" }}>{data.person.name}</Text>
                         <View style={{
                             width: 30,

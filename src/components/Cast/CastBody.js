@@ -15,8 +15,8 @@ const CastBody = ({ data, navigation }) => {
     )
 
     return (
-        <View style={{ margin: 16 }}>
-            <Text style={{ marginBottom: 8 }}>Popular Movies</Text>
+        <View>
+            <Text style={{ marginTop: 13, marginBottom:5,fontSize:23 }}>Popular Movies</Text>
             <View style={{ flexDirection: "row" }}>
                 <FlatList
                     data={data.person.known_for}
@@ -26,14 +26,14 @@ const CastBody = ({ data, navigation }) => {
                 />
             </View>
             <View>
-                <View styles={{ marginTop: 50 }}>
-                    <Text style={{ fontSize: 23 }}> OverViews</Text>
-                    <Text>{data.job}</Text>
-                    <Text>{data.media.overview}</Text>
+                <View style={{ marginVertical: 16 }}>
+                    <Text style={{ fontSize: 23,}}> OverViews</Text>
+                    <Text style={{fontSize:17, color:"orange", fontWeight:"bold", margin:3}}>{data.job}</Text>
+                    <Text style={{fontSize:16, marginVertical:7}}>{data.media.overview}</Text>
                 </View>
                 <View>
                     <Text style={{fontSize: 23}} >Popularity</Text>
-                    <Text>{data.person.popularity}</Text>
+                    <Text style={{fontSize: 16, color:"green"}}>{data.person.popularity}</Text>
                 </View>
             </View>
         </View>

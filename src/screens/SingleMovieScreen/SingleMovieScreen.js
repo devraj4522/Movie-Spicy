@@ -6,6 +6,7 @@ import {
   requestCastCard,
   requestRecomendationCard,
   requestMovieAllImagesCard,
+  requestYouTubeVideoData,
 } from '../../api/api';
 import styles from './styles';
 import { Container } from 'native-base';
@@ -19,12 +20,13 @@ import ImageModal from '../../components/Modal/ImageModal/ImageModal';
 const SingleMovieScreen = ({ navigation, route }) => {
 
   var id = route.params.id;
-
+  
   // Set All the Api Json data in state.
   const [data, setData] = useState([]);
   const [castData, setCastData] = useState([]);
   const [recomendationData, setRecomendationData] = useState([]);
   const [movieImagesListData, setMovieImagesListData] = useState([]);
+  const [youtubeVideoData, setYoutubeVideoData] = useState([]);
 
 
   // Initially app is loading until it loads data in state
@@ -36,6 +38,7 @@ const SingleMovieScreen = ({ navigation, route }) => {
     requestCastCard(id, setCastData);
     requestRecomendationCard(id, setRecomendationData);
     requestMovieAllImagesCard(id, setMovieImagesListData);
+    requestYouTubeVideoData(id,setYoutubeVideoData);
   }, [])
   
   if (data.overview) {
@@ -47,7 +50,7 @@ const SingleMovieScreen = ({ navigation, route }) => {
       <ScrollView>
           <SingleHeader data={data} navigation={navigation} />
         <View style={{ margin: 16 }}>
-          <SingleBody data={data} overview={overview} />
+          <SingleBody data={data} overview={overview} video={youtubeVideoData} />
           <SingleCastList data={castData} navigation={navigation} />
           <SingleRecomendation data={recomendationData} navigation={navigation} />
           <SingleImagesListCard data={movieImagesListData} navigation={navigation} />

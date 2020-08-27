@@ -1,11 +1,32 @@
 import React from 'react';
 import { Text, View, FlatList, TouchableOpacity } from 'react-native';
 import { Container, Button } from 'native-base'
+import YoutubePlayer from 'react-native-youtube-iframe';
 
 
-// Render Buttons for flatList
+const YoutubeVideoRender = ({data}) =>{
 
-const SingleBody = ({ overview, data }) => {
+    if (data.site == "YouTube") {
+        return(
+            <View style={{marginTop: 15}}>
+                <Text style={{fontSize: 20, color: "#FF0000"}}>{data.name}</Text>
+                <View style={{ width: "100%", height: 200 }}>
+                    <YoutubePlayer
+                        height={300}
+                        play={true}
+                        videoId={data.key}
+                    />
+                </View>
+            </View>
+        );
+    } else {
+        return (
+        <View></View>
+        );
+    }
+}
+
+const SingleBody = ({ overview, data, video }) => {
 
     const renderItem = ({ item }) => (
         <TouchableOpacity>
@@ -14,7 +35,7 @@ const SingleBody = ({ overview, data }) => {
     )
 
     return (
-        <View style={{ margin: 16 }}>
+        <View style={{ marginVertical: 16}}>
             <View style={{ flexDirection: "row" }}>
                 <FlatList
                     data={data.genres}
@@ -23,14 +44,15 @@ const SingleBody = ({ overview, data }) => {
                     horizontal={true}
                 />
             </View>
-            <View>
-                <View styles={{ marginTop: 50 }}>
-                    <Text style={{ fontSize: 23 }}>
+            <YoutubeVideoRender data={video} />
+            <View style={{ marginTop: 15 }}>
+                <View>
+                    <Text style={{ fontSize: 23  }}>
                         OverViews
-                </Text>
-                    <Text>
-                        {overview}
                     </Text>
+                <Text style={{marginVertical: 2, color: "#282828", fontSize: 15}}>
+                    {overview}
+                </Text>
                 </View>
             </View>
         </View>

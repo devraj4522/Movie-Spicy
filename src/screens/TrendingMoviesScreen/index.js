@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Text, View, Image, FlatList, ActivityIndicator, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { Text, View, Image, FlatList, ActivityIndicator, TouchableOpacity, Button } from 'react-native';
 import styles from './styles';
 import HomeHeader from '../../components/Home/HomeHeader/HomeHeader'
 import { requestTrendingMovieList } from '../../api/api';
 import { getImageUrl } from '../../api/url';
 // import YouTube from 'react-native-youtube';
-// import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-webview';
+// import {Video} from expo;
+// import { Video } from 'expo-av';
+import YoutubePlayer from 'react-native-youtube-iframe';
 
 const RenderItem = ({ item, navigation }) => {
-
+  
   const id = item.id;
   return (
     <TouchableOpacity onPress={() => {
@@ -23,6 +26,7 @@ const RenderItem = ({ item, navigation }) => {
             width: 125,
             height: 180,
             borderRadius: 8,
+            backgroundColor:"#282828"
           }} />
         </View>
         <View>
@@ -46,6 +50,15 @@ const RenderItem = ({ item, navigation }) => {
 
 const TrendingMoviesScreen = ({ navigation }) => {
   const [data, setData] = useState([]);
+
+
+
+
+
+
+
+
+
   const [isLoading, setIsLoading] = useState(false);
   var page = 1;
 
@@ -62,13 +75,6 @@ const TrendingMoviesScreen = ({ navigation }) => {
         <View>
           <View>
             <Text style={{ fontSize: 23 }}> Trending Movies</Text>
-
-            {/* <WebView
-        originWhitelist={['*']}
-        source={{ html: '<h1>Hello world</h1>' }}
-        style={{ marginTop: 20 }}
-      /> */}
-
           </View>
           <View>
             <FlatList
@@ -78,6 +84,7 @@ const TrendingMoviesScreen = ({ navigation }) => {
               numColumns={2}
               columnWrapperStyle={{ margin: 20, }}
               onEndReached={() => requestTrendingMovieList(page + 1, setData)}
+              
             />
           </View>
         </View>

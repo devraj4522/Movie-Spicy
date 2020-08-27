@@ -34,8 +34,8 @@ const SingleCastList = ({ navigation, data }) => {
   }
 
   return (
-    <View>
-      <Text style={{fontSize: 23}}>Cast</Text>
+    <View style={{marginBottom: 15}}>
+      <Text style={{fontSize: 23, marginBottom: 3}}>Cast</Text>
       <FlatList
         data={data}
         renderItem={renderItem}
