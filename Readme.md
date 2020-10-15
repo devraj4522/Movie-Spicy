@@ -1,7 +1,7 @@
 # Movie Spicy 
 Get latest release of the movie and know about its rating , watch teaser and cast and get recomendation about the movie you wish to watch
 
-## Important Notes 
+## Important Notes about this project
 After the ejection from expo many changes have occured. So android, and ios may not work correctly.
 Use only expo to run the application.
 
