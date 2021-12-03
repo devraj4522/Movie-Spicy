@@ -1,9 +1,16 @@
 # Movie Spicy 
 Get latest release of the movie and know about its rating , watch teaser and cast and get recomendation about the movie you wish to watch
 
-![ScreenShot1](/assets/1.jpg)
+<div align="center">
+  <div style="display: flex;">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact&show_icons=true&title_color=ffffff&icon_color=34abeb&text_color=daf7dc&bg_color=151515" style="vertical-align: top;" />
+    <img src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&title_color=ffffff&icon_color=34abeb&text_color=daf7dc&bg_color=151515" />
+ ![ScreenShot1](/assets/1.jpg)
 ![ScreenShot2](/assets/2.jpg)
 ![ScreenShot3](/assets/3.jpg)
+
+  </div>
+</div>
 
 ## Important Notes 
 After the ejection from expo many changes have occured. So android, and ios may not work correctly.
