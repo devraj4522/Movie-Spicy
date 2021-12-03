@@ -3,9 +3,9 @@ Get latest release of the movie and know about its rating , watch teaser and cas
 
 
   <div style="display: flex; justify-content: space-between;">
-    <img src="/assets/1.jpg" style="border-radius: 1rem; width: 34%; height: 34%;" />
-    <img src="/assets/2.jpg" style="border-radius: 1rem; width: 34%; height: 34%;" />
-    <img src="/assets/3.jpg" style="border-radius: 1rem; width: 34%; height: 34%;" />
+    <img src="/assets/1.jpg" style="border-radius: 1rem; width: 28%; height: 34%; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;" />
+    <img src="/assets/2.jpg" style="border-radius: 1rem; width: 28%; height: 34%; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;" />
+    <img src="/assets/3.jpg" style="border-radius: 1rem; width: 28%; height: 34%; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;" />
   </div>
 
 
