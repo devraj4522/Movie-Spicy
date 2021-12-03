@@ -1,7 +1,7 @@
 # Movie Spicy 
 Get latest release of the movie and know about its rating , watch teaser and cast and get recomendation about the movie you wish to watch
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](/devraj4522/Movie-Spicy/blob/master/assets/1.jpg)
 
 ## Important Notes 
 After the ejection from expo many changes have occured. So android, and ios may not work correctly.
