@@ -1,13 +1,13 @@
 # Movie Spicy 
 Get latest release of the movie and know about its rating , watch teaser and cast and get recomendation about the movie you wish to watch
 
-<div align="center">
+
   <div style="display: flex; justify-content: space-between;">
-    <img src="/assets/1.jpg" style="margin: 0 2rem; border-radius: 1rem; width: 34%; height: 34%;" />
-    <img src="/assets/2.jpg" style="margin: 0 2rem; border-radius: 1rem; width: 34%; height: 34%;" />
-    <img src="/assets/3.jpg" style="margin: 0 2rem; border-radius: 1rem; width: 34%; height: 34%;" />
+    <img src="/assets/1.jpg" style="border-radius: 1rem; width: 34%; height: 34%;" />
+    <img src="/assets/2.jpg" style="border-radius: 1rem; width: 34%; height: 34%;" />
+    <img src="/assets/3.jpg" style="border-radius: 1rem; width: 34%; height: 34%;" />
   </div>
-</div>
+
 
 ## Important Notes 
 After the ejection from expo many changes have occured. So android, and ios may not work correctly.
