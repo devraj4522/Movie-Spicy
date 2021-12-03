@@ -3,9 +3,9 @@ Get latest release of the movie and know about its rating , watch teaser and cas
 
 <div align="center">
   <div style="display: flex;">
-    <img src="/assets/1.jpg" style="vertical-align: top;" />
-    <img src="/assets/2.jpg" />
-    <img src="/assets/3.jpg" />
+    <img src="/assets/1.jpg" style="margin: 0 2rem; border-radius: 1rem; width: 34%; height: 34%;" />
+    <img src="/assets/2.jpg" style="margin: 0 2rem; border-radius: 1rem; width: 34%; height: 34%;" />
+    <img src="/assets/3.jpg" style="margin: 0 2rem; border-radius: 1rem; width: 34%; height: 34%;" />
   </div>
 </div>
 
