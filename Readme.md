@@ -5,6 +5,7 @@ Get latest release of the movie and know about its rating , watch teaser and cas
   <div style="display: flex;">
     <img src="/assets/1.jpg" style="vertical-align: top;" />
     <img src="/assets/2.jpg" />
+    <img src="/assets/3.jpg" />
   </div>
 </div>
 
